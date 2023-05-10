@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after,
+*::after {
+  box-sizing: border-box;
+}
+ol,
+ul,
+menu {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1710px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0px auto;
+}
+.card {
+  background-color: rgb(255, 197, 170);
+}
+.card__title {
+  color: black;
+  font-size: 46px;
+  padding-top: 60px;
+  text-align: center;
+}
+.card__text {
+  color: black;
+  font-size: 40px;
+  padding-top: 30px;
+  text-align: center;
+}
+.card__meta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12vw;
+  margin-top: 70px;
+  padding-bottom:  400px;
+}
+.card__item {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  border-radius: 6%;
+  background-image: url(./files/bkgr_card.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: transform 0.5s;
+  
+}
+
+.card-1:hover {
+  animation-name: wiggle-card-1;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.card-2:hover {
+  animation-name: wiggle-card-2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.card-3:hover {
+  animation-name: wiggle-card-3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+@media screen and (max-width: 1090px){
+  .card__list{
+    gap: 6vw;
+  }
+}
+@media screen and (max-width: 600px){
+  .card__list {
+    display: block;
+}
+.card__item{
+  margin-bottom: 30px;
+}
+}
+@keyframes wiggle-card-1 {
+  0% {
+    transform: rotate();
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    rotate: 12px;
+    top: 10px;
+    left: 12px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes wiggle-card-2 {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 11px;
+    left: 17px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
+
+@keyframes wiggle-card-3 {
+  0% {
+    top: 0px;
+    left: 0px;
+  }
+  50% {
+    top: 8px;
+    left: 11px;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+  }
+}
